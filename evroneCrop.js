@@ -10,6 +10,7 @@
         ratio: false,
         setSelect: false,
         size: false,
+		format: 'png',
         log: false
       };
       settings = $.extend(settings, options);
@@ -305,7 +306,7 @@
       tmp_canvas.height = this.settings.size.h || xywh.h;
       this.log(xywh);
       ctx.drawImage(image, xywh.x, xywh.y, xywh.w, xywh.h, 0, 0, tmp_canvas.width, tmp_canvas.height);
-      return tmp_canvas.toDataURL();
+      return tmp_canvas.toDataURL('image/'+this.settings.format);
     };
     EvroneCrop.prototype.store = function() {
       return $.data(this.element, 'evroneCrop', this.done());

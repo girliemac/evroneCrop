@@ -18,9 +18,9 @@ You can set various options:
 - **ratio**: pass a number > 0 to fix ratio, e.g 1 for square or 16/9 for a rectangle with ratio 16/9
 - **setSelect**: you can set a selection right after initializing, passing coordinates, e.g {x: 0, y: 0, w: 100, h: 100} or "center". Don't pass "h" if you have ratio enabled, it will be ignored;
 - **preview**: pass an IMG element to enable preview;
-
+- **format**: you can specify either 'png' or 'jpeg' image type for the cropped image. If you leave it out, the default is png.
 
 Everytime user changes something, original images data attribute is updated. You can easily get id by the following code:
 
-    $jQuery.data(crop, 'evroneCrop')
+    jQuery.data(crop, 'evroneCrop')
     
